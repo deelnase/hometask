@@ -1,0 +1,25 @@
+public class HelloApplication {
+public static void main(String[] args) throws FileNotFoundException {
+File file = new File("va.txt");
+
+    String str = "";
+    try {
+        Scanner s = new Scanner(file);
+        while (s.hasNext()) {
+        }
+    }
+    catch (FileNotFoundException e) {
+        e.printStackTrace();
+    }
+    str = str.replaceAll(args[0], "");
+    try {
+        PrintWriter output = new PrintWriter(file);
+        output.println(str);
+        output.close();
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+    }
+
+    System.out.println("Complete");
+}
+}
