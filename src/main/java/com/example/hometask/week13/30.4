@@ -2,9 +2,9 @@ public class vava {
   
     public static void main(String[] args) {
 Add add = new Add();
-        for (int i = 0; i < 1000; i++) {
-            Thread a = new Thread(add);
-            a.start();
+        for (int j = 0; j < 1000; j++) {
+            Thread b = new Thread(add);
+            b.start();
         }
         System.out.println("sum = " + add.getSum());
     }
